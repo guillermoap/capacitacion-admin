@@ -1,9 +1,14 @@
 version: '3.7'
+networks:
+  default:
+    external:
+      name: pis-septemberlabs
 services:
   admin:
     tty: true
     build:
       context: ${PARENT_PWD}/capacitacion-admin
+    container_name: pis-septemberlabs_admin
     command: yarn start
     ports:
       - '5001:5001'
