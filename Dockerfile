@@ -11,4 +11,4 @@ RUN yarn install
 COPY /src /src
 COPY /public /public
 COPY .env .env
-EXPOSE 5001
+EXPOSE $PORT
